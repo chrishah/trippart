@@ -1,0 +1,6 @@
+#loop over all data files, for each file replace the filename and location in the Rscript and execute the script
+for file in $(ls -1 *.data.tsv)
+do
+	echo -e "Plotting data from $file"
+	Rscript <(cat plot_to_map.R | sed "s/replacefile/$file/" | sed "s/replacelocation/$(echo $file | cut -d "." -f 1)/")
+done
