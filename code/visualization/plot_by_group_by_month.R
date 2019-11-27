@@ -46,14 +46,15 @@ for(i in 1:nrow(months)){
   
   #plot the header of the figure, i.e. the name of the month
   plot.new()
-  text(0.5,0.5, paste(months$name[i], " (2004 - 2018)"), cex=2, font = 2)
+  #text(0.5,0.5, paste(months$name[i], " (2004 - 2018)"), cex=2, font = 2)
+  text(0.5,0.5, paste(months$name[i]), cex=2, font = 2)
   
   #reset the margins of the individual plots - here we want equal distance in all directions between plots
   par(mar=c(2, 2, 2, 2))
   
   #do the individual plots by group, first set the group and make just the empty map with the group name as the title
   group <- "Istrian"
-  plot(newmap, xlim=c(11, 20), ylim=c(39,46), asp=1, main=paste(group), axes=T)
+  plot(newmap, xlim=c(11, 20), ylim=c(39,46), asp=1, main=paste("A -", group, "gyre"), axes=T)
   
   #then for each location that matches the group, plot the datapoints for the current month into the same plot
   for(i in 1:length(groups$file[grep(group, groups$group)])){
@@ -73,7 +74,7 @@ for(i in 1:nrow(months)){
   
   #Next group, the rest is as above
   group <- "Northern"
-  plot(newmap, xlim=c(11, 20), ylim=c(39,46), asp=1, main=paste(group), axes=T)
+  plot(newmap, xlim=c(11, 20), ylim=c(39,46), asp=1, main=paste("B -", group, "gyre"), axes=T)
   for(i in 1:length(groups$file[grep(group, groups$group)])){
     file <- groups$file[grep(group, groups$group)][i]
     print(paste(file))
@@ -88,7 +89,7 @@ for(i in 1:nrow(months)){
   }
   
   group <- "Central"
-  plot(newmap, xlim=c(11, 20), ylim=c(39,46), asp=1, main=paste(group), axes=T)
+  plot(newmap, xlim=c(11, 20), ylim=c(39,46), asp=1, main=paste("C -", group, "gyre"), axes=T)
   for(i in 1:length(groups$file[grep(group, groups$group)])){
     file <- groups$file[grep(group, groups$group)][i]
     print(paste(file))
@@ -103,7 +104,7 @@ for(i in 1:nrow(months)){
   }
   
   group <- "Southern"
-  plot(newmap, xlim=c(11, 20), ylim=c(39,46), asp=1, main=paste(group), axes=T)
+  plot(newmap, xlim=c(11, 20), ylim=c(39,46), asp=1, main=paste("D -", group, "gyre"), axes=T)
   for(i in 1:length(groups$file[grep(group, groups$group)])){
     file <- groups$file[grep(group, groups$group)][i]
     print(paste(file))
