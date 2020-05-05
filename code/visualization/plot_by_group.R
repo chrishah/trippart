@@ -1,4 +1,3 @@
-setwd('/home/chrishah/Desktop/Particles/particles_data/')
 
 library(rworldmap)
 #newmap <- getMap(resolution = 'low')
@@ -18,7 +17,7 @@ pch <- 20
 pointsize <- 0.2
 
 #4 panel
-dev.off()
+#dev.off()
 
 pdf("by_group_4_panel.pdf")
 par(mar=c(0, 2, 0, 2))
@@ -33,7 +32,8 @@ plot(newmap, xlim=c(11, 20), ylim=c(39,46), asp=1, main=paste(group), axes=T)
 for(i in 1:length(groups$file[grep(group, groups$group)])){
   file <- groups$file[grep(group, groups$group)][i]
   print(paste(file))
-  data <- read.table(paste(file), sep = '\t')
+  #data <- read.table(paste(file), sep = '\t')
+  data <- read.table(paste0("../simulations/data/",file), sep = '\t')
   colnames(data) <- c("datetime", "lon", "lat")
   points(data$lat, data$lon, 
          col=rgb(red=(group_colors$red[grep(group, group_colors$Group)]/255), 
@@ -48,7 +48,8 @@ plot(newmap, xlim=c(11, 20), ylim=c(39,46), asp=1, main=paste(group), axes=T)
 for(i in 1:length(groups$file[grep(group, groups$group)])){
   file <- groups$file[grep(group, groups$group)][i]
   print(paste(file))
-  data <- read.table(paste(file), sep = '\t')
+  #data <- read.table(paste(file), sep = '\t')
+  data <- read.table(paste0("../simulations/data/",file), sep = '\t')
   colnames(data) <- c("datetime", "lon", "lat")
   points(data$lat, data$lon, 
          col=rgb(red=(group_colors$red[grep(group, group_colors$Group)]/255), 
@@ -63,7 +64,8 @@ plot(newmap, xlim=c(11, 20), ylim=c(39,46), asp=1, main=paste(group), axes=T)
 for(i in 1:length(groups$file[grep(group, groups$group)])){
   file <- groups$file[grep(group, groups$group)][i]
   print(paste(file))
-  data <- read.table(paste(file), sep = '\t')
+  #data <- read.table(paste(file), sep = '\t')
+  data <- read.table(paste0("../simulations/data/",file), sep = '\t')
   colnames(data) <- c("datetime", "lon", "lat")
   points(data$lat, data$lon, 
          col=rgb(red=(group_colors$red[grep(group, group_colors$Group)]/255), 
@@ -78,7 +80,8 @@ plot(newmap, xlim=c(11, 20), ylim=c(39,46), asp=1, main=paste(group), axes=T)
 for(i in 1:length(groups$file[grep(group, groups$group)])){
   file <- groups$file[grep(group, groups$group)][i]
   print(paste(file))
-  data <- read.table(paste(file), sep = '\t')
+  #data <- read.table(paste(file), sep = '\t')
+  data <- read.table(paste0("../simulations/data/",file), sep = '\t')
   colnames(data) <- c("datetime", "lon", "lat")
   points(data$lat, data$lon, 
          col=rgb(red=(group_colors$red[grep(group, group_colors$Group)]/255), 
@@ -91,7 +94,7 @@ for(i in 1:length(groups$file[grep(group, groups$group)])){
 dev.off()
 
 #all in one
-dev.off()
+#dev.off()
 
 pdf("by_group_all-in-one.pdf")
 plot(newmap, xlim=c(11, 20), ylim=c(39,46), asp=1, main="February - September (2004 - 2018)", axes=T)
@@ -101,7 +104,8 @@ group <- "Istrian"
 for(i in 1:length(groups$file[grep(group, groups$group)])){
   file <- groups$file[grep(group, groups$group)][i]
   print(paste(file))
-  data <- read.table(paste(file), sep = '\t')
+  #data <- read.table(paste(file), sep = '\t')
+  data <- read.table(paste0("../simulations/data/",file), sep = '\t')
   colnames(data) <- c("datetime", "lon", "lat")
   points(data$lat, data$lon, 
          col=rgb(red=(group_colors$red[grep(group, group_colors$Group)]/255), 
@@ -115,7 +119,8 @@ group <- "Northern"
 for(i in 1:length(groups$file[grep(group, groups$group)])){
   file <- groups$file[grep(group, groups$group)][i]
   print(paste(file))
-  data <- read.table(paste(file), sep = '\t')
+  #data <- read.table(paste(file), sep = '\t')
+  data <- read.table(paste0("../simulations/data/",file), sep = '\t')
   colnames(data) <- c("datetime", "lon", "lat")
   points(data$lat, data$lon, 
          col=rgb(red=(group_colors$red[grep(group, group_colors$Group)]/255), 
@@ -129,7 +134,8 @@ group <- "Central"
 for(i in 1:length(groups$file[grep(group, groups$group)])){
   file <- groups$file[grep(group, groups$group)][i]
   print(paste(file))
-  data <- read.table(paste(file), sep = '\t')
+  #data <- read.table(paste(file), sep = '\t')
+  data <- read.table(paste0("../simulations/data/",file), sep = '\t')
   colnames(data) <- c("datetime", "lon", "lat")
   points(data$lat, data$lon, 
          col=rgb(red=(group_colors$red[grep(group, group_colors$Group)]/255), 
@@ -143,7 +149,8 @@ group <- "Southern"
 for(i in 1:length(groups$file[grep(group, groups$group)])){
   file <- groups$file[grep(group, groups$group)][i]
   print(paste(file))
-  data <- read.table(paste(file), sep = '\t')
+  #data <- read.table(paste(file), sep = '\t')
+  data <- read.table(paste0("../simulations/data/",file), sep = '\t')
   colnames(data) <- c("datetime", "lon", "lat")
   points(data$lat, data$lon, 
          col=rgb(red=(group_colors$red[grep(group, group_colors$Group)]/255), 
@@ -156,9 +163,9 @@ dev.off()
 
 ##############################
 #4 panel for paper
-dev.off()
+#dev.off()
 
-pdf("by_group_4_panel_test.pdf")
+pdf("by_group_4_panel_paper.pdf")
 par(mar=c(0, 2, 0, 2))
 #layout(matrix(c(1,2,4,1,3,5), ncol = 2), heights = c(0.2,1,1), widths = c(1,1,1,1))
 layout(matrix(c(1,3,2,4), ncol = 2), heights = c(1,1), widths = c(1,1,1,1))
@@ -172,7 +179,8 @@ plot(newmap, xlim=c(11, 20), ylim=c(39,46), asp=1, main=paste("A -", group, "gyr
 for(i in 1:length(groups$file[grep(group, groups$group)])){
   file <- groups$file[grep(group, groups$group)][i]
   print(paste(file))
-  data <- read.table(paste(file), sep = '\t')
+  #data <- read.table(paste(file), sep = '\t')
+  data <- read.table(paste0("../simulations/data/",file), sep = '\t')
   colnames(data) <- c("datetime", "lon", "lat")
   points(data$lat, data$lon, 
          col=rgb(red=(group_colors$red[grep(group, group_colors$Group)]/255), 
@@ -183,11 +191,12 @@ for(i in 1:length(groups$file[grep(group, groups$group)])){
 }
 
 group <- "Northern"
-plot(newmap, xlim=c(11, 20), ylim=c(39,46), asp=1, main=paste("B -", group, "gyre"), axes=T)
+plot(newmap, xlim=c(11, 20), ylim=c(39,46), asp=1, main=paste("B -", group, "Adriatic gyre"), axes=T)
 for(i in 1:length(groups$file[grep(group, groups$group)])){
   file <- groups$file[grep(group, groups$group)][i]
   print(paste(file))
-  data <- read.table(paste(file), sep = '\t')
+  #data <- read.table(paste(file), sep = '\t')
+  data <- read.table(paste0("../simulations/data/",file), sep = '\t')
   colnames(data) <- c("datetime", "lon", "lat")
   points(data$lat, data$lon, 
          col=rgb(red=(group_colors$red[grep(group, group_colors$Group)]/255), 
@@ -198,11 +207,12 @@ for(i in 1:length(groups$file[grep(group, groups$group)])){
 }
 
 group <- "Central"
-plot(newmap, xlim=c(11, 20), ylim=c(39,46), asp=1, main=paste("C -", group, "gyre"), axes=T)
+plot(newmap, xlim=c(11, 20), ylim=c(39,46), asp=1, main=paste("C -", group, "Adriatic gyre"), axes=T)
 for(i in 1:length(groups$file[grep(group, groups$group)])){
   file <- groups$file[grep(group, groups$group)][i]
   print(paste(file))
-  data <- read.table(paste(file), sep = '\t')
+  #data <- read.table(paste(file), sep = '\t')
+  data <- read.table(paste0("../simulations/data/",file), sep = '\t')
   colnames(data) <- c("datetime", "lon", "lat")
   points(data$lat, data$lon, 
          col=rgb(red=(group_colors$red[grep(group, group_colors$Group)]/255), 
@@ -213,11 +223,12 @@ for(i in 1:length(groups$file[grep(group, groups$group)])){
 }
 
 group <- "Southern"
-plot(newmap, xlim=c(11, 20), ylim=c(39,46), asp=1, main=paste("D -", group, "gyre"), axes=T)
+plot(newmap, xlim=c(11, 20), ylim=c(39,46), asp=1, main=paste("D -", group, "Adriatic gyre"), axes=T)
 for(i in 1:length(groups$file[grep(group, groups$group)])){
   file <- groups$file[grep(group, groups$group)][i]
   print(paste(file))
-  data <- read.table(paste(file), sep = '\t')
+  #data <- read.table(paste(file), sep = '\t')
+  data <- read.table(paste0("../simulations/data/",file), sep = '\t')
   colnames(data) <- c("datetime", "lon", "lat")
   points(data$lat, data$lon, 
          col=rgb(red=(group_colors$red[grep(group, group_colors$Group)]/255), 

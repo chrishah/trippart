@@ -1,4 +1,3 @@
-setwd('/home/chrishah/Desktop/Particles/particles_data/')
 
 #here the data is defined, I am using a bash loop to change the input files/locations on the fly and execute the script
 #in bash on the command line

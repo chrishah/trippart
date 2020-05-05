@@ -1,4 +1,3 @@
-setwd('/home/chrishah/Desktop/Particles/particles_data/')
 
 library(rworldmap)
 #newmap <- getMap(resolution = 'low')
@@ -61,7 +60,8 @@ for(i in 1:nrow(months)){
     file <- groups$file[grep(group, groups$group)][i]
     print(paste(file))
     #read in the data
-    data <- read.table(paste(file), sep = '\t')
+    #data <- read.table(paste(file), sep = '\t')
+    data <- read.table(paste0("../simulations/data/",file), sep = '\t')
     colnames(data) <- c("datetime", "lon", "lat")
     #plot the datapoints - note the filter by data via grep and pattern
     points(data[grep(pattern, data$datetime), ]$lat, data[grep(pattern, data$datetime), ]$lon, 
@@ -78,7 +78,8 @@ for(i in 1:nrow(months)){
   for(i in 1:length(groups$file[grep(group, groups$group)])){
     file <- groups$file[grep(group, groups$group)][i]
     print(paste(file))
-    data <- read.table(paste(file), sep = '\t')
+    #data <- read.table(paste(file), sep = '\t')
+    data <- read.table(paste0("../simulations/data/",file), sep = '\t')
     colnames(data) <- c("datetime", "lon", "lat")
     points(data[grep(pattern, data$datetime), ]$lat, data[grep(pattern, data$datetime), ]$lon, 
            col=rgb(red=(group_colors$red[grep(group, group_colors$Group)]/255), 
@@ -93,7 +94,8 @@ for(i in 1:nrow(months)){
   for(i in 1:length(groups$file[grep(group, groups$group)])){
     file <- groups$file[grep(group, groups$group)][i]
     print(paste(file))
-    data <- read.table(paste(file), sep = '\t')
+    #data <- read.table(paste(file), sep = '\t')
+    data <- read.table(paste0("../simulations/data/",file), sep = '\t')
     colnames(data) <- c("datetime", "lon", "lat")
     points(data[grep(pattern, data$datetime), ]$lat, data[grep(pattern, data$datetime), ]$lon, 
            col=rgb(red=(group_colors$red[grep(group, group_colors$Group)]/255), 
@@ -108,7 +110,8 @@ for(i in 1:nrow(months)){
   for(i in 1:length(groups$file[grep(group, groups$group)])){
     file <- groups$file[grep(group, groups$group)][i]
     print(paste(file))
-    data <- read.table(paste(file), sep = '\t')
+    #data <- read.table(paste(file), sep = '\t')
+    data <- read.table(paste0("../simulations/data/",file), sep = '\t')
     colnames(data) <- c("datetime", "lon", "lat")
     points(data[grep(pattern, data$datetime), ]$lat, data[grep(pattern, data$datetime), ]$lon, 
            col=rgb(red=(group_colors$red[grep(group, group_colors$Group)]/255), 
@@ -123,7 +126,7 @@ for(i in 1:nrow(months)){
 }
 
 #plot by month, all groups in one
-dev.off()
+#dev.off()
 
 #as above, the only difference is that we plot all into the same figure, just a simple plot with header
 for(i in 1:nrow(months)){
@@ -137,7 +140,8 @@ for(i in 1:nrow(months)){
   for(i in 1:length(groups$file[grep(group, groups$group)])){
     file <- groups$file[grep(group, groups$group)][i]
     print(paste(file))
-    data <- read.table(paste(file), sep = '\t')
+    #data <- read.table(paste(file), sep = '\t')
+    data <- read.table(paste0("../simulations/data/",file), sep = '\t')
     colnames(data) <- c("datetime", "lon", "lat")
     points(data[grep(pattern, data$datetime), ]$lat, data[grep(pattern, data$datetime), ]$lon, 
          col=rgb(red=(group_colors$red[grep(group, group_colors$Group)]/255), 
@@ -151,7 +155,8 @@ for(i in 1:nrow(months)){
   for(i in 1:length(groups$file[grep(group, groups$group)])){
     file <- groups$file[grep(group, groups$group)][i]
     print(paste(file))
-    data <- read.table(paste(file), sep = '\t')
+    #data <- read.table(paste(file), sep = '\t')
+    data <- read.table(paste0("../simulations/data/",file), sep = '\t')
     colnames(data) <- c("datetime", "lon", "lat")
     points(data[grep(pattern, data$datetime), ]$lat, data[grep(pattern, data$datetime), ]$lon, 
          col=rgb(red=(group_colors$red[grep(group, group_colors$Group)]/255), 
@@ -165,7 +170,8 @@ for(i in 1:nrow(months)){
   for(i in 1:length(groups$file[grep(group, groups$group)])){
     file <- groups$file[grep(group, groups$group)][i]
     print(paste(file))
-    data <- read.table(paste(file), sep = '\t')
+    #data <- read.table(paste(file), sep = '\t')
+    data <- read.table(paste0("../simulations/data/",file), sep = '\t')
     colnames(data) <- c("datetime", "lon", "lat")
     points(data[grep(pattern, data$datetime), ]$lat, data[grep(pattern, data$datetime), ]$lon, 
          col=rgb(red=(group_colors$red[grep(group, group_colors$Group)]/255), 
@@ -179,7 +185,8 @@ for(i in 1:nrow(months)){
   for(i in 1:length(groups$file[grep(group, groups$group)])){
     file <- groups$file[grep(group, groups$group)][i]
     print(paste(file))
-    data <- read.table(paste(file), sep = '\t')
+    #data <- read.table(paste(file), sep = '\t')
+    data <- read.table(paste0("../simulations/data/",file), sep = '\t')
     colnames(data) <- c("datetime", "lon", "lat")
     points(data[grep(pattern, data$datetime), ]$lat, data[grep(pattern, data$datetime), ]$lon, 
          col=rgb(red=(group_colors$red[grep(group, group_colors$Group)]/255), 
