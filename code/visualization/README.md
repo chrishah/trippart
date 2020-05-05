@@ -45,7 +45,7 @@ apt-get update
 apt-get install imagemagick
 convert by_group_4_panel_paper_convert.pdf -background transparent by_group_4_panel_paper.png
 
-convert the pdfs to pngs using inkscape
+#convert the pdfs to pngs using inkscape
 apt-get install inkscape
 for pdf in $(ls -1 *.pdf)
 do 
