@@ -23,7 +23,7 @@ numbers <- c(2,3,4,5,6,7,8,9)
 names <- c("February", "March", "April", "May", "June", "July", "August", "September")
 months <- data.frame(numbers, names)
 
-#plot by month, by location, in 9 panels
+#plot by month, by group, in 4 panels
 for(i in 1:nrow(months)){
   print(months$name[i])
   #produce the pattern that will be searched for in the data from the Number. For February it's '-02-', because the date is
@@ -74,7 +74,7 @@ for(i in 1:nrow(months)){
   
   #Next group, the rest is as above
   group <- "Northern"
-  plot(newmap, xlim=c(11, 20), ylim=c(39,46), asp=1, main=paste("B -", group, "gyre"), axes=T)
+  plot(newmap, xlim=c(11, 20), ylim=c(39,46), asp=1, main=paste("B -", group, "Adriatic gyre"), axes=T)
   for(i in 1:length(groups$file[grep(group, groups$group)])){
     file <- groups$file[grep(group, groups$group)][i]
     print(paste(file))
@@ -90,7 +90,7 @@ for(i in 1:nrow(months)){
   }
   
   group <- "Central"
-  plot(newmap, xlim=c(11, 20), ylim=c(39,46), asp=1, main=paste("C -", group, "gyre"), axes=T)
+  plot(newmap, xlim=c(11, 20), ylim=c(39,46), asp=1, main=paste("C -", group, "Adriatic gyre"), axes=T)
   for(i in 1:length(groups$file[grep(group, groups$group)])){
     file <- groups$file[grep(group, groups$group)][i]
     print(paste(file))
@@ -106,7 +106,7 @@ for(i in 1:nrow(months)){
   }
   
   group <- "Southern"
-  plot(newmap, xlim=c(11, 20), ylim=c(39,46), asp=1, main=paste("D -", group, "gyre"), axes=T)
+  plot(newmap, xlim=c(11, 20), ylim=c(39,46), asp=1, main=paste("D -", group, "Adriatic gyre"), axes=T)
   for(i in 1:length(groups$file[grep(group, groups$group)])){
     file <- groups$file[grep(group, groups$group)][i]
     print(paste(file))

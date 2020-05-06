@@ -42,11 +42,11 @@ Rscript <(cat <(echo "setwd('$(pwd)')") plot_by_group_by_month.R)
 
 #convert the pdfs to pngs using convert
 apt-get update
-apt-get install imagemagick
+apt-get install -y imagemagick
 convert by_group_4_panel_paper_convert.pdf -background transparent by_group_4_panel_paper.png
 
 #convert the pdfs to pngs using inkscape
-apt-get install inkscape
+apt-get install -y inkscape
 for pdf in $(ls -1 *.pdf)
 do 
 	inkscape --export-dpi=600 --export-area-drawing --export-type=png $pdf
