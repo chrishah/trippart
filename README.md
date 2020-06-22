@@ -1,7 +1,8 @@
 # trippart
 
-Supplementary code for Lagrangian particle simulations from the paper: ___Distinct phylogeographic population structure across sub-basin and gyre
-boundaries in the Adriatic Sea___ by Sefc K.M., Wagner M., Zangl L., Weiss S., Steinwender B., Arminger P., Weinmaier T., Balkic N., Kohler T., Inthal S., Kovacic M., Zogaris S., Hahn C., and Koblmüller S.
+Supplementary code for Lagrangian particle simulations from the paper: 
+___Phylogeographic structure and population connectivity of a small benthic fish (*Tripterygion tripteronotum*) in the Adriatic Sea___
+Kristina M. Sefc, Maximilian Wagner, Lukas Zangl, Sara Weiß, Bernd Steinwender, Paul Arminger, Theresa Weinmaier, Nejra Balkic, Tobias Kohler, Silvio Inthal, Marcelo Kovačić, Stamatis Zogaris, Christoph Hahn, Stephan Koblmüller
 
 The simulations were done using the [Parcels](http://oceanparcels.org/) package, which we have set up in a Docker container (see [here](https://github.com/chrishah/parcels-jupyter-notebook-docker) for details), utilizing daily mean circulation fields produced by the Adriatic Forecasting System ([AFS](http://oceanlab.cmcc.it/afs/)). 
 
