@@ -15,4 +15,8 @@ For full reproducibility, we provide here all code for doing the simulations as 
  - [notebook II](https://github/chrishah/trippart/blob/master/code/simulations/extract_data.ipynb): simulation results are converted into plain text format to be processed in R.
  - [R scripts](https://github.com/chrishah/trippart/tree/master/code/visualization): How the data were plotted.
 
+## Release notes
+
+ - Version 1.0 is permanently archived on Zenodo: [![DOI](https://zenodo.org/badge/215553907.svg)](https://zenodo.org/badge/latestdoi/215553907)
+
 
